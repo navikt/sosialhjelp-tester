@@ -10,7 +10,7 @@
     "testcafe-reporter-xunit": "^2.1.0"
   },
   "scripts": {
-    "test": "testcafe chrome:headless src/**/* -r xunit:/tmp/test-results/res.xml"
+    "test": "testcafe \"saucelabs:Chrome@beta:Windows 10\" src/**/* -r xunit:/tmp/test-results/res.xml"
   },
   "repository": {
     "type": "git",
