@@ -77,4 +77,5 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#soknadsskjema > div.bekreftOpplysningerPanel.blokk-xs.bolk > div > div > label")
         .click("#gaa_videre_button")
         .wait(10000) // Vent 10 sekunder
-        });
+});
+
