@@ -16,8 +16,8 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click('#oppholdsadresse_folkeregistrert')
         .click('#gaa_videre_button')
 
-        .typeText("#hva_sokes_det_om_textarea", "-livsopphold, komfyr, bestikk") // Hva søkes om
-        .typeText("#begrunnelse_soknad_textarea", "Hei, jeg trenger hjelp fra dere. Mangler mange viktige ting til kjøkkenet mitt og så har jeg ikke penger til det hverdagslige") // Begrunnelse
+        .typeText("#begrunnelse_hva", "-livsopphold, komfyr, bestikk") // Hva søkes om
+        .typeText("#begrunnelse_hvorfor", "Hei, jeg trenger hjelp fra dere. Mangler mange viktige ting til kjøkkenet mitt og så har jeg ikke penger til det hverdagslige") // Begrunnelse
         .click("#gaa_videre_button")
 
         .click("#soknadsskjema > div:nth-child(6) > div > fieldset > div > div > div:nth-child(1) > div > div") // Ja
@@ -25,8 +25,8 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#gaa_videre_button")
 
         .click("#soknadsskjema > div:nth-child(4) > div > div > fieldset > div > div:nth-child(3) > div") // Ugift
-        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--systeminfo > div > fieldset > div > div.systeminfoMedSkjema > div > div > div > div > div > div.barn.barn_siste_liste_element > ul > div > div > div > fieldset > div > div > div:nth-child(2) > div > div") // Ikke delt bosted
-        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--systeminfo > div > fieldset > div > div.systeminfoMedSkjema > div > div > div > div > div > div.blokk.barnebidrag > div > div > fieldset > div > div:nth-child(3) > div") // Betaler og mottar barnebidrag
+        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--systeminfo > div > fieldset > div > div > div > div > div > div > div > div:nth-child(1) > div > ul > div > div > div > fieldset > div > div > div:nth-child(2) > div > div > label") // Ikke delt bosted
+        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--systeminfo > div > fieldset > div > div > div > div > div > div > div > div.blokk.barnebidrag > div > div > fieldset > div > div:nth-child(3) > div > label") // Betaler og mottar barnebidrag
         .click("#gaa_videre_button")
 
         .click("#bosituasjon_radio_kommunal_label") // Kommunal bolig
@@ -39,21 +39,21 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(2) > div > div") // Har utbetalt penger fra andre
         .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(3) > div > div") // Har utbetalt penger fra andre
         .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(4) > div > div") // Har utbetalt penger fra andre
-        .typeText("#utbetalinger_annet_textarea", "Har fått utbetalt arv fra morfar")
+        .typeText("#inntekt_inntekterutbetalinger_annet_textarea", "Har fått utbetalt arv fra morfar")
         .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(1) > div > div") // Hvilke bankkonti og spareordniger har du?
         .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(2) > div > div") // Hvilke bankkonti og spareordniger har du?
         .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(3) > div > div") // Hvilke bankkonti og spareordniger har du?
         .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(4) > div > div") // Hvilke bankkonti og spareordniger har du?
         .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(5) > div > div") // Hvilke bankkonti og spareordniger har du?
         .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(6) > div > div") // Hvilke bankkonti og spareordniger har du?
-        .typeText("#bankinnskudd_annet_textarea", "Storebrand stipend-konto")
+        .typeText("#inntekt_bankinnskuddformue_annet_textarea", "Storebrand stipend-konto")
         .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div:nth-child(1) > div > div > label") // Eier du noe med økonomisk verdi?
         .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(1) > div > div > label") // Eier du noe med økonomisk verdi?
         .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(2) > div > div > label") // Eier du noe med økonomisk verdi?
         .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(3) > div > div > label") // Eier du noe med økonomisk verdi?
         .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(4) > div > div > label") // Eier du noe med økonomisk verdi?
         .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(5) > div > div > label") // Eier du noe med økonomisk verdi?
-        .typeText("#eiendeler_annet_textarea", "Flaggstang fra sist gang jeg flyttet.")
+        .typeText("#inntekt_eierandelerverdier_annet_textarea", "Flaggstang fra sist gang jeg flyttet.")
         .click("#gaa_videre_button")
 
         .click("#soknadsskjema > div.skjema-sporsmal > div > fieldset > div > div > div:nth-child(1) > div > div") // Har du utgifter til å bo?
