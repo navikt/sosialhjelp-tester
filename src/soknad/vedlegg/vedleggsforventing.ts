@@ -1,8 +1,7 @@
-import { Selector } from 'testcafe';
-import { equal } from 'assert';
+import { config} from "../../config";
 
 fixture `Vedlegg`
-    .page `https://sosialhjelp-test.herokuapp.com/soknadsosialhjelp/mock-login`;
+    .page(`${config.soknadUrl}/mock-login`);
 
 test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
     await t

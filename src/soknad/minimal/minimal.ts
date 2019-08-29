@@ -1,7 +1,8 @@
 import { Selector } from 'testcafe';
+import { config } from '../../config';
 
 fixture `Minimal`
-    .page `https://sosialhjelp-test.herokuapp.com/soknadsosialhjelp/mock-login`;
+    .page(`${config.soknadUrl}/mock-login`);
 
 test('Grønt løp', async t => {
     await t

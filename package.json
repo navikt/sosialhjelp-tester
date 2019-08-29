@@ -10,7 +10,10 @@
     "testcafe-reporter-xunit": "^2.1.0"
   },
   "scripts": {
-    "test": "testcafe \"saucelabs:Chrome@beta:Windows 10\" src/**/* -r xunit:/tmp/test-results/res.xml"
+    "test": "npm run test-soknad && npm run test-innsyn",
+    "test-soknad": "testcafe Chrome src/soknad/**/* -r xunit:/tmp/test-results/soknad.xml",
+    "test-innsyn": "testcafe Chrome src/innsyn/**/* -r xunit:/tmp/test-results/innsyn.xml",
+    "test-soknad-remote": "testcafe \"saucelabs:Chrome@beta:Windows 10\" src/**/* -r xunit:/tmp/test-results/res.xml"
   },
   "repository": {
     "type": "git",
