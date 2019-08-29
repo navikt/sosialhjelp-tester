@@ -37,7 +37,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
+      - run: npm run saucelabs
 
       - store_test_results:
           path: /tmp/test-results
