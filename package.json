@@ -13,6 +13,7 @@
     "test": "npm run test-soknad && npm run test-innsyn",
     "test-soknad": "testcafe Chromium src/soknad/**/* -r xunit:soknad.xml",
     "test-innsyn": "testcafe Chromium src/innsyn/**/* -r xunit:innsyn.xml",
+    "test-minimal": "testcafe Chromium src/*/minimal/**/* -r xunit:minimal.xml",
     "saucelabs": "npm run saucelabs-soknad && npm run saucelabs-innsyn",
     "saucelabs-soknad": "testcafe \"saucelabs:Chrome@beta:Windows 10\" src/soknad/**/* -r xunit:/tmp/test-results/soknad.xml",
     "saucelabs-innsyn": "testcafe \"saucelabs:Chrome@beta:Windows 10\" src/innsyn/**/* -r xunit:/tmp/test-results/innsyn.xml"
