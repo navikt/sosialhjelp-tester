@@ -20,7 +20,7 @@ test('Grønt løp', async t => {
         .click('#gaa_videre_button')
         .click('#gaa_videre_button')
         .click('#gaa_videre_button')
-        .click('#bekreft_oppsummering_checkbox')
+        .click("#soknadsskjema > div.bekreftOpplysningerPanel.blokk-xs.bolk > div > div > label")
         .click('#gaa_videre_button')
         .expect(Selector('#root > span > div > div.blokk-center.panel.ettersendelse__panel > div:nth-child(2) > div.avsnitt > h3 > span').innerText).eql('Søknaden er sendt til');
         });
