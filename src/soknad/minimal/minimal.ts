@@ -1,12 +1,15 @@
 import { Selector } from 'testcafe';
-import { config } from '../../config';
+import {config} from "../../config";
+
+// Hvis Søknad-API er "kald", kan det ta veldig lang tid før dette elementet finnes på siden
+const userIdInput = Selector('#root > span > div > div > input', { timeout: 30_000 });
 
 fixture `Minimal`
     .page(`${config.soknadUrl}/mock-login`);
 
 test('Grønt løp', async t => {
     await t
-        .typeText('#root > span > div > div > input', "01234567890")
+        .typeText(userIdInput, "01234567890")
         .click('#login-button')
         .click('#root > span > div > div > div:nth-child(10) > button')
         .click("#start_soknad_button")
