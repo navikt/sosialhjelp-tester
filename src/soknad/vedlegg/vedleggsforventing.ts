@@ -32,26 +32,26 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .typeText("#bosituasjon_antallpersoner", "5") // Antall bor sammen med
         .click("#gaa_videre_button")
 
-        .click("#soknadsskjema > div:nth-child(6) > div > div > fieldset > div > div > div:nth-child(1) > div > div") // Har søkt bostøtte
-        .click("#soknadsskjema > div:nth-child(7) > div > fieldset > div > div > div:nth-child(1) > div > div") // Har utbetalt penger fra andre
-        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(1) > div > div") // Har utbetalt penger fra andre
-        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(2) > div > div") // Har utbetalt penger fra andre
-        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(3) > div > div") // Har utbetalt penger fra andre
-        .click("#soknadsskjema > div.skjema-sporsmal.skjema-sporsmal--noBottomPadding.skjema-sporsmal--jaNeiSporsmal > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(4) > div > div") // Har utbetalt penger fra andre
+        .click("#inntekt_bostotte_radio_ja") // Har søkt bostøtte
+        .click("#inntekt_inntekter_radio_ja") // Har utbetalt penger fra andre
+        .click("#boutgifter_utbytte_checkbox") // Har utbetalt penger fra andre
+        .click("#boutgifter_salg_checkbox") // Har utbetalt penger fra andre
+        .click("#boutgifter_forsikring_checkbox") // Har utbetalt penger fra andre
+        .click("#boutgifter_annet_checkbox") // Har utbetalt penger fra andre
         .typeText("#inntekt_inntekterutbetalinger_annet_textarea", "Har fått utbetalt arv fra morfar")
-        .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(1) > div > div") // Hvilke bankkonti og spareordniger har du?
-        .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(2) > div > div") // Hvilke bankkonti og spareordniger har du?
-        .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(3) > div > div") // Hvilke bankkonti og spareordniger har du?
-        .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(4) > div > div") // Hvilke bankkonti og spareordniger har du?
-        .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(5) > div > div") // Hvilke bankkonti og spareordniger har du?
-        .click("#soknadsskjema > div:nth-child(9) > div > fieldset > div > div:nth-child(6) > div > div") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_brukskonto_checkbox") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_sparekonto_checkbox") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_bsu_checkbox") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_livsforsikring_checkbox") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_verdipapirer_checkbox") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_annet_checkbox") // Hvilke bankkonti og spareordniger har du?
         .typeText("#inntekt_bankinnskuddformue_annet_textarea", "Storebrand stipend-konto")
-        .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div:nth-child(1) > div > div > label") // Eier du noe med økonomisk verdi?
-        .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(1) > div > div > label") // Eier du noe med økonomisk verdi?
-        .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(2) > div > div > label") // Eier du noe med økonomisk verdi?
-        .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(3) > div > div > label") // Eier du noe med økonomisk verdi?
-        .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(4) > div > div > label") // Eier du noe med økonomisk verdi?
-        .click("#soknadsskjema > div:nth-child(10) > div > fieldset > div > div > div.valgMedUnderskjema__skjema > div > div > div > div > div > div > div > fieldset > div > div:nth-child(5) > div > div > label") // Eier du noe med økonomisk verdi?
+        .click("#inntekt_eierandeler_radio_ja") // Eier du noe med økonomisk verdi?
+        .click("#verdier_bolig_checkbox") // Eier du noe med økonomisk verdi?
+        .click("#verdier_campingvogn_checkbox") // Eier du noe med økonomisk verdi?
+        .click("#verdier_kjoretoy_checkbox") // Eier du noe med økonomisk verdi?
+        .click("#verdier_fritidseiendom_checkbox") // Eier du noe med økonomisk verdi?
+        .click("#verdier_annet_checkbox") // Eier du noe med økonomisk verdi?
         .typeText("#inntekt_eierandelerverdier_annet_textarea", "Flaggstang fra sist gang jeg flyttet.")
         .click("#gaa_videre_button")
 

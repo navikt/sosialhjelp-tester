@@ -9,5 +9,5 @@ fixture `Minimal`
 // TODO: Bruk fagsystem-mock til å sette innsyn-data
 test('Grønt løp', async t => {
     await t
-        .expect(Selector('.typo-innholdstittel').innerText).eql('Søknaden er sendt');
+        .expect(Selector('.typo-innholdstittel').innerText).eql('Søknaden er mottatt');
 });
