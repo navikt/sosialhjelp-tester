@@ -1,4 +1,4 @@
-import { config} from "../../config";
+import {config} from "../../config";
 
 fixture `Vedlegg`
     .page(`${config.soknadUrl}/mock-login`);
@@ -12,7 +12,7 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#root > span > div > div > div:nth-child(8) > div.mock-data-bolk__body > div.mock-block-collapse > div > div:nth-child(3) > div > div > div > div.mock-newThing-body > button:nth-child(7)") // Ok       
         .click('#root > span > div > div > div:nth-child(10) > button')
         .click("#start_soknad_button")
-        .click('#oppholdsadresse_folkeregistrert', {offsetX: 50})
+        .click('#oppholdsadresse_folkeregistrert_klikkbar_div')
         .click('#gaa_videre_button')
 
         .typeText("#begrunnelse_hva", "-livsopphold, komfyr, bestikk") // Hva søkes om
@@ -24,7 +24,7 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#gaa_videre_button")
 
         .click("#soknadsskjema > div:nth-child(4) > div > div > fieldset > div > div:nth-child(3) > div") // Ugift
-        .click("#barn_radio_0_radio_nei", {offsetX: 50}) // Ikke delt bosted
+        .click("#barn_radio_0_radio_nei_klikkbar_div") // Ikke delt bosted
         .click("#familie_barnebidrag_radio_begge_label") // Betaler og mottar barnebidrag
         .click("#gaa_videre_button")
 
@@ -32,26 +32,26 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .typeText("#bosituasjon_antallpersoner", "5") // Antall bor sammen med
         .click("#gaa_videre_button")
 
-        .click("#inntekt_bostotte_radio_ja", {offsetX: 50}) // Har søkt bostøtte
-        .click("#inntekt_inntekter_radio_ja", {offsetX: 50}) // Har utbetalt penger fra andre
-        .click("#boutgifter_utbytte_checkbox", {offsetX: 50}) // Har utbetalt penger fra andre
-        .click("#boutgifter_salg_checkbox", {offsetX: 50}) // Har utbetalt penger fra andre
-        .click("#boutgifter_forsikring_checkbox", {offsetX: 50}) // Har utbetalt penger fra andre
-        .click("#boutgifter_annet_checkbox", {offsetX: 50}) // Har utbetalt penger fra andre
+        .click("#inntekt_bostotte_radio_ja_klikkbar_div") // Har søkt bostøtte
+        .click("#inntekt_inntekter_radio_ja_klikkbar_div") // Har utbetalt penger fra andre
+        .click("#boutgifter_utbytte_checkbox_klikkbar_div") // Har utbetalt penger fra andre
+        .click("#boutgifter_salg_checkbox_klikkbar_div") // Har utbetalt penger fra andre
+        .click("#boutgifter_forsikring_checkbox_klikkbar_div") // Har utbetalt penger fra andre
+        .click("#boutgifter_annet_checkbox_klikkbar_div") // Har utbetalt penger fra andre
         .typeText("#inntekt_inntekterutbetalinger_annet_textarea", "Har fått utbetalt arv fra morfar")
-        .click("#formue_brukskonto_checkbox", {offsetX: 50}) // Hvilke bankkonti og spareordniger har du?
-        .click("#formue_sparekonto_checkbox", {offsetX: 50}) // Hvilke bankkonti og spareordniger har du?
-        .click("#formue_bsu_checkbox", {offsetX: 50}) // Hvilke bankkonti og spareordniger har du?
-        .click("#formue_livsforsikring_checkbox", {offsetX: 50}) // Hvilke bankkonti og spareordniger har du?
-        .click("#formue_verdipapirer_checkbox", {offsetX: 50}) // Hvilke bankkonti og spareordniger har du?
-        .click("#formue_annet_checkbox", {offsetX: 50}) // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_brukskonto_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_sparekonto_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_bsu_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_livsforsikring_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_verdipapirer_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
+        .click("#formue_annet_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
         .typeText("#inntekt_bankinnskuddformue_annet_textarea", "Storebrand stipend-konto")
-        .click("#inntekt_eierandeler_radio_ja", {offsetX: 50}) // Eier du noe med økonomisk verdi?
-        .click("#verdier_bolig_checkbox", {offsetX: 50}) // Eier du noe med økonomisk verdi?
-        .click("#verdier_campingvogn_checkbox", {offsetX: 50}) // Eier du noe med økonomisk verdi?
-        .click("#verdier_kjoretoy_checkbox", {offsetX: 50}) // Eier du noe med økonomisk verdi?
-        .click("#verdier_fritidseiendom_checkbox", {offsetX: 50}) // Eier du noe med økonomisk verdi?
-        .click("#verdier_annet_checkbox", {offsetX: 50}) // Eier du noe med økonomisk verdi?
+        .click("#inntekt_eierandeler_radio_ja_klikkbar_div") // Eier du noe med økonomisk verdi?
+        .click("#verdier_bolig_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
+        .click("#verdier_campingvogn_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
+        .click("#verdier_kjoretoy_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
+        .click("#verdier_fritidseiendom_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
+        .click("#verdier_annet_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
         .typeText("#inntekt_eierandelerverdier_annet_textarea", "Flaggstang fra sist gang jeg flyttet.")
         .click("#gaa_videre_button")
 
