@@ -11,6 +11,7 @@ test('Grønt løp', async t => {
         .click('#root > span > div > div > div:nth-child(10) > button')
         .click("#start_soknad_button")
         .click("#oppholdsadresse_folkeregistrert")
+        .expect(Selector("#folkeregistrertAdresse_data_loaded").visible).ok()
         .click('#oppholdsadresse_folkeregistrert_klikkbar_div')
         .typeText('#kontakt_telefon', '12345678')
         .click('#gaa_videre_button')

@@ -1,4 +1,5 @@
 import {config} from "../../config";
+import {Selector} from "testcafe";
 
 fixture `Vedlegg`
     .page(`${config.soknadUrl}/mock-login`);
@@ -12,7 +13,7 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#root > span > div > div > div:nth-child(8) > div.mock-data-bolk__body > div.mock-block-collapse > div > div:nth-child(3) > div > div > div > div.mock-newThing-body > button:nth-child(7)") // Ok       
         .click('#root > span > div > div > div:nth-child(10) > button')
         .click("#start_soknad_button")
-        .click("#oppholdsadresse_folkeregistrert")
+        .expect(Selector("#folkeregistrertAdresse_data_loaded").visible).ok()
         .click('#oppholdsadresse_folkeregistrert_klikkbar_div')
         .click('#gaa_videre_button')
 
