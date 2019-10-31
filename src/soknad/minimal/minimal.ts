@@ -10,6 +10,7 @@ test('Grønt løp', async t => {
         .click('#login-button')
         .click('#root > span > div > div > div:nth-child(10) > button')
         .click("#start_soknad_button")
+        .click("#oppholdsadresse_folkeregistrert")
         .click('#oppholdsadresse_folkeregistrert_klikkbar_div')
         .typeText('#kontakt_telefon', '12345678')
         .click('#gaa_videre_button')
