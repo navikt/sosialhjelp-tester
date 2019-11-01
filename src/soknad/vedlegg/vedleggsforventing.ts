@@ -47,7 +47,7 @@ test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
         .click("#formue_livsforsikring_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
         .click("#formue_verdipapirer_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
         .click("#formue_annet_checkbox_klikkbar_div") // Hvilke bankkonti og spareordniger har du?
-        .typeText("#inntekt_bankinnskuddformue_annet_textarea", "Storebrand stipend-konto")
+        .typeText(Selector("#inntekt_bankinnskuddformue_annet_textarea"), "Storebrand stipend-konto")
         .click("#inntekt_eierandeler_radio_ja_klikkbar_div") // Eier du noe med økonomisk verdi?
         .click("#verdier_bolig_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
         .click("#verdier_campingvogn_checkbox_klikkbar_div") // Eier du noe med økonomisk verdi?
