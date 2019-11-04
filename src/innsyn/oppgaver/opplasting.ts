@@ -52,7 +52,7 @@ test('at opplasting av vedlegg og sletting fungerer paa oppgaver', async t => {
         .wait(4000)
         .typeText('#ny_soknad_input', fiksDigisosSokerId)
         .click('#opprett_ny_soknad_knapp')
-        .click('#soknad_3')
+        .click('#soknad_1')
         .click('#etterspor_mer_dokumentasjon_knapp')
         .typeText('#nytt_dokumentasjonskrav_input_type', "verdipapir")
         .typeText('#nytt_dokumentasjonskrav_input_tilleggsinformasjon', "verdibevis for Ancestral Recall")
