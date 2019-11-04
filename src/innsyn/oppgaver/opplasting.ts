@@ -48,8 +48,6 @@ fixture(`oppgaver`);
 test('at opplasting av vedlegg og sletting fungerer paa oppgaver', async t => {
     await t
         .navigateTo(`${domainWoldena(env)}${woldenaPath}`)
-        .click(Selector(`#system_settings_backend_url_radio_${woldenaSystemSettingsUrlTypes(env)}`))
-        .wait(4000)
         .typeText('#ny_soknad_input', fiksDigisosSokerId)
         .click('#opprett_ny_soknad_knapp')
         .click('#soknad_1')
