@@ -19,7 +19,7 @@
     "test-minimal": "testcafe Chrome src/*/minimal/**/* -r xunit:minimal.xml",
     "saucelabs": "npm run saucelabs-soknad && npm run saucelabs-innsyn",
     "saucelabs-soknad": "SAUCE_JOB=\"Sosialhjelp Søknad\" testcafe \"saucelabs:Chrome@beta:Windows 10\" src/soknad/**/* -r xunit:/tmp/test-results/soknad.xml",
-    "saucelabs-innsyn": "SAUCE_JOB=\"Sosialhjelp Innsyn\" testcafe \"saucelabs:Chrome@beta:Windows 10\" src/innsyn/**/* -r xunit:/tmp/test-results/innsyn.xml"
+    "saucelabs-innsyn": "SAUCE_JOB=\"Sosialhjelp Innsyn\" testcafe \"saucelabs:Chrome@beta:Windows 10\" src/innsyn/minimal/* -r xunit:/tmp/test-results/innsyn.xml"
   },
   "repository": {
     "type": "git",
