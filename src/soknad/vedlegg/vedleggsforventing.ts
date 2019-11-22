@@ -6,7 +6,7 @@ fixture `Vedlegg`
 
 test('Gjennomgang av søknad for å trigge 27 vedlegg', async t => {
     await t
-        .typeText("#root > span > div > div > input", "12345678911")
+        .typeText("#root > span > div > div > div > div > input", "12345678911")
         .click("#login-button")
         .click("#root > span > div > div > div:nth-child(8) > div.mock-data-bolk__body > div:nth-child(2) > label") // Barn
         .click("#root > span > div > div > div:nth-child(8) > div.mock-data-bolk__body > div.mock-block-collapse > div > div:nth-child(3) > button") // Legg til barn
