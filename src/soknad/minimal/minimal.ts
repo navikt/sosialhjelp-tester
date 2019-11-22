@@ -6,7 +6,7 @@ fixture `Minimal`
 
 test('Grønt løp', async t => {
     await t
-        .typeText('#root > span > div > div > input', "01234567890")
+        .typeText('#root > span > div > div > div > div > input', "01234567890")
         .click('#login-button')
         .click('#root > span > div > div > div:nth-child(10) > button')
         .click("#start_soknad_button")
